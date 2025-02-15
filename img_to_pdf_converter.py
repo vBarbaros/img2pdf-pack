@@ -61,13 +61,13 @@ def compile_images_to_pdf(jp2_dir, output_pdf):
 
 if __name__ == "__main__":
     # Directory containing the original JPEG images (numbered as 1.jpeg, 2.jpeg, etc.)
-    input_dir = "imgs/imgs-hw2"
+    input_dir = "imgs/"
 
     # Directory to save the converted JPEG 2000 images
-    output_dir = "imgs/imgs-hw2/jp2"
+    output_dir = input_dir + "jp2"
 
     # Path to save the final PDF
-    output_pdf = "imgs/imgs-hw2/jp2/a2-compression-50.pdf"
+    output_pdf = input_dir + "a2-compression-50.pdf"
 
     # Step 1: Convert JPEG to JPEG 2000 with low quality
     convert_to_jpeg2000_opencv(input_dir, output_dir, compression_ratio=50)
